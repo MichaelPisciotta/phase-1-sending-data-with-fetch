@@ -8,25 +8,17 @@ function submitData(name, email){
     body:JSON.stringify({name, email})
 
     })
-    .then(res => console.log(res.json()))
-    // document.body.innerHTML = 
+    .then(res => () =>{
+        return res.json()
+    })
+    .then(data => renderId(data))
+    
 
 
  }
 
+function renderId(user){
+    console.log(user)
 
+}
 
-
-//  const configurationObject = {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Accept": "application/json"
-//     },
-//     body: JSON.stringify({
-//       dogName: "Byron",
-//       dogBreed: "Poodle"
-//     })
-//   };
-  
-//   fetch("http://localhost:3000/dogs", configurationObject); 
